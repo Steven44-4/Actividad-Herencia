@@ -1,0 +1,22 @@
+# Clase Animal
+class Animal:
+    def _init_(self, nombre, especie):
+        self.nombre = nombre
+        self.especie = especie
+
+    def imprimir_datos(self):
+        print(f"Nombre: {self.nombre}, Especie: {self.especie}")
+
+# Clase Perro que hereda de Animal
+class Perro(Animal):
+    def _init_(self, nombre, especie, raza):
+        super()._init_(nombre, especie)
+        self.raza = raza
+
+    def imprimir_raza(self):
+        print(f"Raza: {self.raza}")
+
+# Crear instancia de Perro
+perro = Perro("Firulais", "Canino", "Labrador")
+perro.imprimir_datos()
+perro.imprimir_raza()
