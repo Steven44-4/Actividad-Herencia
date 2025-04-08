@@ -1,0 +1,22 @@
+class Vehiculo:
+    def _init_(self, marca, año):
+        self.marca = marca
+        self.año = año
+
+    def imprimir_info(self):
+        print(f"Marca: {self.marca}, Año: {self.año}")
+
+class Coche(Vehiculo):
+    def _init_(self, marca, año, modelo):
+        super()._init_(marca, año)
+        self.modelo = modelo
+
+    def imprimir_modelo(self):
+        print(f"Modelo: {self.modelo}")
+
+# Crear una instancia de Coche
+mi_coche = Coche("Toyota", 2022, "Corolla")
+
+# Imprimir sus atributos usando los métodos
+mi_coche.imprimir_info()
+mi_coche.imprimir_modelo()
