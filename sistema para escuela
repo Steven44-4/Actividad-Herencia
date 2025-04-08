@@ -1,0 +1,22 @@
+# Clase Persona
+class Persona:
+    def _init_(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def imprimir_datos(self):
+        print(f"Nombre: {self.nombre}, Edad: {self.edad}")
+
+# Clase Estudiante que hereda de Persona
+class Estudiante(Persona):
+    def _init_(self, nombre, edad, grado):
+        super()._init_(nombre, edad)
+        self.grado = grado
+
+    def imprimir_grado(self):
+        print(f"Grado: {self.grado}")
+
+# Crear instancia de Estudiante
+estudiante = Estudiante("Juan", 16, "10° grado")
+estudiante.imprimir_datos()
+estudiante.imprimir_grado()
